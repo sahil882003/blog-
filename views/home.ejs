@@ -1,0 +1,14 @@
+<%- include('header') %>
+<h1><%= content %></h1>
+<p><%= para %></p>
+<% if(flag){ %>
+    <form action="/post" method="post">
+<% for (var i=0;i< titles.length ;i++){ %>
+    <h1><%= titles[i] %></h1>
+    <p><%= posts[i].substring(0,100) %>.....<button class="cbtn" name='btn'value="<%= i %>" type="submit">Read more</button> </p>
+<% } %>
+    </form>
+<% } %>
+   <%- include('footer') %>
+
+
