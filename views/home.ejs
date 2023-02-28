@@ -5,7 +5,12 @@
     <form action="/post" method="post">
 <% for (var i=0;i< titles.length ;i++){ %>
     <h1><%= titles[i] %></h1>
+    <% if(posts[i].length>100){ %>
     <p><%= posts[i].substring(0,100) %>.....<button class="cbtn" name='btn'value="<%= i %>" type="submit">Read more</button> </p>
+    <% }else{ %>
+    <p><%= posts[i] %></p>
+    <% } %>
+    
 <% } %>
     </form>
 <% } %>
